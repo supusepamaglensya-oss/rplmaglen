@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Biodata Maglensya Yulya Supusepa - Mahasiswa Universitas Pattimura" />
+  <title>Biodata - Maglensya Yulya Supusepa</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy:       #0a1931;
+      --navy-mid:   #122448;
+      --navy-light: #1e3a6e;
+      --navy-pale:  #e8eef7;
+      --accent:     #2e6be6;
+      --accent-lt:  #5b8fee;
+      --white:      #ffffff;
+      --off-white:  #f4f7fc;
+      --muted:      #5a6a85;
+      --border:     #d0daea;
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--off-white); color: var(--navy); }
+    .ff-serif { font-family: 'Playfair Display', serif; }
+
+    /* HEADER */
+    .site-header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      position: relative; overflow: hidden;
+    }
+    .site-header::before {
+      content: ''; position: absolute; top: -80px; right: -80px;
+      width: 300px; height: 300px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(46,107,230,.3), transparent 70%);
+    }
+    .site-header::after {
+      content: ''; position: absolute; bottom: -50px; left: 33%;
+      width: 180px; height: 180px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,.07), transparent 70%);
+    }
+    .avatar {
+      width: 118px; height: 118px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-lt), var(--accent));
+      border: 4px solid rgba(255,255,255,.3);
+      box-shadow: 0 0 0 8px rgba(46,107,230,.18);
+      font-family: 'Playfair Display', serif;
+      font-size: 2.7rem; font-weight: 900; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; position: relative; z-index: 2;
+    }
+    .h-name { color: #fff; font-size: 2rem; font-weight: 900; line-height: 1.2; }
+    .h-sub  { color: rgba(255,255,255,.72); font-size: .8rem; letter-spacing: .13em; text-transform: uppercase; }
+    .h-role { color: rgba(255,255,255,.48); font-size: .82rem; }
+    .h-link { color: rgba(255,255,255,.72); font-size: .83rem; text-decoration: none; transition: color .2s; }
+    .h-link:hover { color: #fff; }
+
+    /* NAV */
+    .site-nav { background: #fff; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .site-nav .nav-link {
+      color: var(--muted); font-size: .73rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .08em;
+      padding: .85rem 1rem;
+      border-bottom: 2px solid transparent; transition: all .2s; white-space: nowrap;
+    }
+    .site-nav .nav-link:hover, .site-nav .nav-link.active {
+      color: var(--accent); border-bottom-color: var(--accent);
+    }
+
+    /* CARD */
+    .bcard { background: #fff; border: 1px solid var(--border) !important; border-radius: 14px !important; }
+    .sec-title {
+      font-family: 'Playfair Display', serif; font-size: 1.08rem; font-weight: 700;
+      color: var(--navy); padding-bottom: .7rem; border-bottom: 2px solid var(--accent);
+      display: flex; align-items: center; gap: .6rem; margin-bottom: 1.2rem;
+    }
+    .icon-box {
+      width: 33px; height: 33px; background: var(--accent); border-radius: 8px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: .95rem; color: #fff; flex-shrink: 0;
+    }
+
+    /* BLOCKQUOTE */
+    .bq {
+      border-left: 4px solid var(--accent); background: var(--navy-pale);
+      border-radius: 0 10px 10px 0; padding: 1rem 1.2rem;
+      font-style: italic; color: var(--navy); font-size: .93rem; line-height: 1.9;
+    }
+    .bq cite { display: block; margin-top: .65rem; font-style: normal; font-size: .73rem; font-weight: 700; color: var(--muted); }
+
+    /* TABLE */
+    .bio-table thead th { background: var(--navy) !important; color: rgba(255,255,255,.82); font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; }
+    .bio-table td { font-size: .875rem; vertical-align: middle; }
+    .bio-table tbody tr:nth-child(even) { background: var(--off-white); }
+    .bio-table tbody tr:hover { background: var(--navy-pale); }
+    .bio-table .lbl { color: var(--muted); font-weight: 600; font-size: .73rem; }
+
+    /* TIMELINE */
+    .timeline { position: relative; padding-left: 26px; }
+    .timeline::before { content: ''; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: linear-gradient(to bottom, var(--accent), var(--border)); }
+    .t-item { position: relative; margin-bottom: 1.3rem; }
+    .t-item::before { content: ''; position: absolute; left: -23px; top: 5px; width: 13px; height: 13px; border-radius: 50%; background: var(--accent); border: 2px solid #fff; box-shadow: 0 0 0 3px var(--accent-lt); }
+    .t-item:last-child { margin-bottom: 0; }
+    .t-item h3 { font-family: 'Playfair Display', serif; font-size: .93rem; font-weight: 700; color: var(--navy); margin-bottom: .1rem; }
+    .t-item p  { font-size: .8rem; color: var(--muted); margin: 0; }
+    .badge-yr { display: inline-block; margin-top: .3rem; font-size: .7rem; font-weight: 700; background: var(--navy-pale); color: var(--accent); padding: .18rem .75rem; border-radius: 999px; }
+
+    /* SKILL TAGS */
+    .sk { display: inline-flex; align-items: center; gap: .4rem; padding: .32rem .9rem; border-radius: 999px; font-size: .82rem; font-weight: 500; transition: transform .15s; cursor: default; }
+    .sk:hover { transform: translateY(-2px); }
+    .sk-tech { background: var(--navy);   color: rgba(255,255,255,.88); }
+    .sk-art  { background: #174f35;       color: #c6f0de; }
+    .sk-soft { background: #6b3300;       color: #ffe8cc; }
+
+    /* CONTACT */
+    .ci { padding: .6rem 0; border-bottom: 1px solid var(--border); }
+    .ci:last-child { border-bottom: none; }
+    .ci-lbl { font-size: .67rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+    .ci-val { font-size: .875rem; font-weight: 500; color: var(--navy); }
+    .ci-val a { color: var(--accent); text-decoration: none; }
+    .ci-val a:hover { text-decoration: underline; }
+
+    /* ORG */
+    .org-card { background: var(--off-white); border: 1px solid var(--border); border-radius: 10px; padding: .8rem 1rem; }
+    .org-card h4 { font-size: .875rem; font-weight: 700; color: var(--navy); margin-bottom: .15rem; }
+    .org-card p  { font-size: .75rem; color: var(--muted); margin: 0; }
+
+    /* DETAILS */
+    details { border-radius: 10px; overflow: hidden; }
+    details summary { cursor: pointer; font-size: .875rem; font-weight: 600; color: var(--accent); list-style: none; padding: .7rem 1rem; background: var(--off-white); border: 1px solid var(--border); border-radius: 10px; }
+    details[open] summary { border-radius: 10px 10px 0 0; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::before { content: '▸ '; transition: .2s; }
+    details[open] summary::before { content: '▾ '; }
+    .det-body { background: var(--off-white); border: 1px solid var(--border); border-top: none; border-radius: 0 0 10px 10px; padding: .85rem 1rem; font-size: .875rem; color: var(--muted); line-height: 1.75; }
+
+    /* FOOTER */
+    .site-footer { background: var(--navy); color: rgba(255,255,255,.5); font-size: .78rem; }
+
+    @media print { .site-nav { display: none; } }
+    @media (max-width: 575px) { .h-name { font-size: 1.45rem; } .avatar { width: 90px; height: 90px; font-size: 2rem; } }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header py-5">
+  <div class="container" style="max-width:920px; position:relative; z-index:2;">
+    <div class="d-flex flex-column flex-sm-row align-items-center gap-4">
+      <div class="avatar">MY</div>
+      <div class="text-center text-sm-start">
+        <h1 class="ff-serif h-name mb-1">Maglensya Yulya Supusepa</h1>
+        <p class="h-sub mb-1">Mahasiswa Ilmu Komputer &nbsp;·&nbsp; Universitas Pattimura</p>
+        <p class="h-role mb-3">Desainer &bull; Fotografer &bull; Programmer &bull; Seniman</p>
+        <div class="d-flex flex-wrap justify-content-center justify-content-sm-start gap-3">
+          <a href="mailto:maglensyayulya@gmail.com" class="h-link"><i class="bi bi-envelope me-1"></i>maglensyayulya@gmail.com</a>
+          <a href="tel:+6281247064825" class="h-link"><i class="bi bi-telephone me-1"></i>081247064825</a>
+          <span class="h-link" style="cursor:default;"><i class="bi bi-geo-alt me-1"></i>Passo, Baguala, Ambon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- NAVBAR -->
+<nav class="site-nav">
+  <div class="container overflow-auto" style="max-width:920px;">
+    <ul class="nav flex-nowrap">
+      <li class="nav-item"><a class="nav-link" href="#tujuan">Tujuan</a></li>
+      <li class="nav-item"><a class="nav-link" href="#pribadi">Data Pribadi</a></li>
+      <li class="nav-item"><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
+      <li class="nav-item"><a class="nav-link" href="#organisasi">Organisasi</a></li>
+      <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
+      <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="container py-5" style="max-width:920px;">
+  <div class="row g-4">
+
+    <!-- KOLOM KIRI -->
+    <div class="col-12 col-lg-7">
+
+      <!-- TUJUAN -->
+      <section id="tujuan" class="bcard p-4 mb-4">
+        <div class="sec-title"><span class="icon-box">🎯</span> Pernyataan Tujuan</div>
+        <blockquote class="bq">
+          Saya adalah mahasiswa aktif Program Studi Ilmu Komputer di Universitas Pattimura Ambon
+          dengan minat kuat di bidang teknologi, desain kreatif, dan seni. Saya memiliki semangat
+          belajar yang tinggi, terbiasa bekerja dalam tim melalui kegiatan organisasi, dan berkomitmen
+          untuk terus mengembangkan diri demi berkontribusi nyata bagi masyarakat Maluku dan Indonesia.
+          <cite>— Maglensya Yulya Supusepa</cite>
+        </blockquote>
+        <details class="mt-3">
+          <summary>Mengapa saya layak mendapat kesempatan ini?</summary>
+          <div class="det-body">
+            Saya memiliki kombinasi keahlian teknis (Python, desain) dan keahlian seni (fotografi, ukulele, tari)
+            yang membuat saya mampu berpikir kreatif sekaligus analitis. Pengalaman di OSIS dan Himpunan Mahasiswa
+            melatih saya dalam kepemimpinan dan kerja kolaboratif.
+          </div>
+        </details>
+      </section>
+
+      <!-- DATA PRIBADI -->
+      <section id="pribadi" class="bcard p-4 mb-4">
+        <div class="sec-title"><span class="icon-box">👤</span> Data Pribadi</div>
+        <p class="fst-italic mb-2" style="font-size:.75rem; color:var(--muted);">Informasi identitas diri</p>
+        <table class="table table-bordered table-hover bio-table mb-0">
+          <thead>
+            <tr><th>Keterangan</th><th>Detail</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="lbl">Nama Lengkap</td><td>Maglensya Yulya Supusepa</td></tr>
+            <tr><td class="lbl">Tempat Lahir</td><td>Ambon</td></tr>
+            <tr><td class="lbl">Tanggal Lahir</td><td>18 Februari 2007</td></tr>
+            <tr><td class="lbl">Umur</td><td>18 Tahun</td></tr>
+            <tr><td class="lbl">Jenis Kelamin</td><td>Perempuan</td></tr>
+            <tr><td class="lbl">Kewarganegaraan</td><td>Indonesia</td></tr>
+            <tr><td class="lbl">Agama</td><td>Kristen Protestan</td></tr>
+            <tr><td class="lbl">Provinsi</td><td>Maluku</td></tr>
+            <tr><td class="lbl">Kota</td><td>Ambon</td></tr>
+            <tr><td class="lbl">Kecamatan</td><td>Baguala</td></tr>
+            <tr><td class="lbl">Kelurahan</td><td>Passo</td></tr>
+            <tr><td class="lbl">Status</td><td>Mahasiswa Aktif</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- PENDIDIKAN -->
+      <section id="pendidikan" class="bcard p-4 mb-4">
+        <div class="sec-title"><span class="icon-box">🎓</span> Riwayat Pendidikan</div>
+        <div class="timeline">
+          <div class="t-item">
+            <h3>Universitas Pattimura</h3>
+            <p>Program Studi Ilmu Komputer &mdash; Ambon</p>
+            <span class="badge-yr">2024 – Sekarang</span>
+          </div>
+          <div class="t-item">
+            <h3>SMA Negeri 2 Ambon</h3>
+            <p>Sekolah Menengah Atas &mdash; Ambon</p>
+            <span class="badge-yr">2021 – 2024</span>
+          </div>
+          <div class="t-item">
+            <h3>SMP Negeri 9 Ambon</h3>
+            <p>Sekolah Menengah Pertama &mdash; Ambon</p>
+            <span class="badge-yr">2018 – 2021</span>
+          </div>
+          <div class="t-item">
+            <h3>SD Negeri 75 Passo</h3>
+            <p>Sekolah Dasar &mdash; Passo, Ambon</p>
+            <span class="badge-yr">2013 – 2019</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEAHLIAN -->
+      <section id="keahlian" class="bcard p-4 mb-4">
+        <div class="sec-title"><span class="icon-box">⚡</span> Keahlian &amp; Minat</div>
+
+        <p class="text-uppercase fw-semibold mb-2" style="font-size:.68rem; letter-spacing:.1em; color:var(--muted);">Teknologi &amp; Desain</p>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span class="sk sk-tech">💻 Python</span>
+          <span class="sk sk-tech">🎨 Desain Grafis</span>
+          <span class="sk sk-tech">📷 Fotografi</span>
+        </div>
+
+        <p class="text-uppercase fw-semibold mb-2" style="font-size:.68rem; letter-spacing:.1em; color:var(--muted);">Seni &amp; Budaya</p>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span class="sk sk-art">💃 Dancer</span>
+          <span class="sk sk-art">🎵 Ukulele</span>
+        </div>
+
+        <p class="text-uppercase fw-semibold mb-2" style="font-size:.68rem; letter-spacing:.1em; color:var(--muted);">Soft Skills</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="sk sk-soft">🤝 Kerja Tim</span>
+          <span class="sk sk-soft">🗣 Komunikasi</span>
+          <span class="sk sk-soft">📋 Organisasi</span>
+          <span class="sk sk-soft">🧠 Berpikir Kritis</span>
+        </div>
+      </section>
+
+    </div><!-- /kolom kiri -->
+
+    <!-- SIDEBAR KANAN -->
+    <div class="col-12 col-lg-5">
+
+      <!-- KONTAK -->
+      <section id="kontak" class="bcard p-4 mb-4">
+        <div class="sec-title"><span class="icon-box">📬</span> Kontak</div>
+        <div class="ci"><div class="ci-lbl">Email</div><div class="ci-val"><a href="mailto:maglensyayulya@gmail.com">maglensyayulya@gmail.com</a></div></div>
+        <div class="ci"><div class="ci-lbl">Telepon / WhatsApp</div><div class="ci-val">081247064825</div></div>
+        <div class="ci"><div class="ci-lbl">Alamat</div><div class="ci-val">Passo, Kec. Baguala<br>Kota Ambon, Maluku<br>Indonesia</div></div>
+      </section>
+
+      <!-- ORGANISASI -->
+      <section id="organisasi" class="bcard p-4 mb-4">
+        <div class="sec-title"><span class="icon-box">🏛</span> Organisasi</div>
+        <div class="org-card mb-3">
+          <h4>Himpunan Mahasiswa Ilmu Komputer</h4>
+          <p>Universitas Pattimura &mdash; Anggota Aktif</p>
+        </div>
+        <div class="org-card">
+          <h4>OSIS</h4>
+          <p>SMA Negeri 2 Ambon &mdash; Anggota</p>
+        </div>
+      </section>
+
+      <!-- HOBI -->
+      <section class="bcard p-4 mb-4">
+        <div class="sec-title"><span class="icon-box">🌟</span> Hobi</div>
+        <div class="ci"><div class="ci-lbl">Seni Visual</div><div class="ci-val">Desain Grafis, Fotografi</div></div>
+        <div class="ci"><div class="ci-lbl">Musik</div><div class="ci-val">Bermain Ukulele</div></div>
+        <div class="ci"><div class="ci-lbl">Tari</div><div class="ci-val">Dancer / Koreografi</div></div>
+        <div class="ci"><div class="ci-lbl">Teknologi</div><div class="ci-val">Pemrograman Python</div></div>
+      </section>
+
+      <!-- PERNYATAAN -->
+      <section class="bcard p-4">
+        <div class="sec-title"><span class="icon-box">✍️</span> Pernyataan</div>
+        <p style="font-size:.875rem; color:var(--muted); line-height:1.8;">
+          Dengan ini saya menyatakan bahwa semua informasi yang tercantum dalam biodata ini
+          adalah <strong style="color:var(--navy);">benar dan dapat dipertanggungjawabkan.</strong>
+        </p>
+        <p class="mt-3 mb-1" style="font-size:.73rem; color:var(--muted);">Ambon, 2025</p>
+        <p class="ff-serif fst-italic mb-0" style="font-size:1.1rem; color:var(--navy);">Maglensya Yulya Supusepa</p>
+      </section>
+
+    </div><!-- /sidebar -->
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer text-center py-4 mt-2">
+  <div class="container" style="max-width:920px;">
+    <p class="mb-0">&copy; 2025 Maglensya Yulya Supusepa &mdash; Universitas Pattimura Ambon</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.site-nav .nav-link');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 90) cur = s.id; });
+    navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + cur));
+  });
+</script>
+
+</body>
+</html>
